@@ -1,6 +1,13 @@
 // Copyright (c) 2020, Daniel Martí <mvdan@mvdan.cc>
 // See LICENSE for licensing information
 
+// go-mod-size lists each module required by the main module, and its zip
+// download size as reported by the configured GOPROXY.
+//
+// For example, to save the list and then show it sorted by size:
+//
+//     go-mod-size | tee sizes
+//     sort -k2 -n <sizes
 package main
 
 import (
