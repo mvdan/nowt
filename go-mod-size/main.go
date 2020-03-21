@@ -33,6 +33,10 @@ func init() {
 	}
 }
 
+// TODO: is "all" the right pattern here? it seems to include modules that
+// aren't actually needed as per "go mod why -m". maybe we need a narrower set
+// of modules.
+
 func main() {
 	mods, err := listModules(context.TODO(), nil, "all")
 	if err != nil {
